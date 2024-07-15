@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TechNova</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+            body {
+            margin: 0;
+            padding: 0;
+            }
+            /* Define el contenedor principal con un fondo gris claro y un ancho del 100% */
+            .main-container {
+                background-color: #E8E7E7;
+                width: 100%;
+                overflow: hidden; /* Oculta cualquier contenido desbordado */
+            }
+
+            /* Alinea el texto al centro en el contenedor del encabezado y la navegación */
+            .header-container,
+            .nav-container {
+                text-align: center;
+            }
+
+            /* Establece el fondo y el color del texto del contenedor del encabezado */
+            .header-container {
+                background-color: #E8E7E7;
+                color: #000;
+            }
+
+            /* Elimina el margen del encabezado h1 y añade un relleno del 1% */
+            header h1 {
+                margin: 0;
+                padding: 1%;
+            }
+
+            /* Configura el fondo y el relleno del elemento de navegación */
+            nav {
+                background-color: #333;
+                padding: 1.5%;
+            }
+
+            /* Modificamos los enlaces de navegación con relleno, sin subrayado y color blanco */
+            nav a {
+                padding: 2%;
+                text-decoration: none;
+                color: #fff;
+            }
+
+            /* Define el contenedor de la sección con un ancho del 100% y oculta el desbordamiento */
+            .section-container {
+                display: flex;
+                overflow: hidden;
+            }
+
+            /* Define el contenedor de la sección con un ancho del 100% y oculta el desbordamiento */
+            .image-section {
+                flex: 1;
+                overflow: hidden;
+            }
+
+            /* Configura el contenedor de la imagen con un ancho del 100% y oculta el desbordamiento */
+            .image-section img {
+                width: 100%;
+            }
+
+            /* Define el contenedor del producto con un ancho del 100% y añade un relleno de 20px */
+            .container-producto {
+                width: 100%;
+                padding: 20px;
+            }
+
+           /* Centra el texto en la sección del producto y añade un relleno inferior de 20px */
+            .seccion-producto {
+                text-align: center;
+                padding-bottom: 20px;
+            }
+
+            /* Elimina el margen del encabezado h2 y establece el tamaño de fuente a 2em */
+            .seccion-producto h2 {
+                margin: 0;
+                font-size: 2em;
+            }
+
+            /* Configura el contenedor de los productos con flexbox, envoltura de línea y centra los elementos */
+            .productos {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;/* Añade un espacio de 20px entre los elementos */
+            }
+
+            /* Estiliza los artículos de productos con fondo blanco, borde, borde redondeado y sombra */
+            article {
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                padding: 10px;
+                text-align: center;
+                width: 300px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            /* Ajusta las imágenes de los artículos para que ocupen el 100% del ancho y mantengan la proporción */
+            article img {
+                width: 100%;
+                height: auto;
+            }
+
+            /* Establece el margen del encabezado h3 y el tamaño de fuente a 1.2em */
+            article h3 {
+                margin: 15px 0;
+                font-size: 1.2em;
+            }
+
+            /* Configura el margen y el tamaño de fuente de los párrafos */
+            article p {
+                margin: 10px 0;
+                font-size: 1em;
+                font-weight: bold;
+            }
+
+            /* Estiliza el botón con color de fondo, color de texto, borde redondeado y cursor de puntero */
+            article button {
+                background-color: #28a745;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                padding: 10px 20px;
+                cursor: pointer;
+                font-size: 1em;
+            }
+
+            /* Cambia el color de fondo del botón al pasar el mouse sobre él */
+            article button:hover {
+                background-color: #218838;
+            }
+
+            /* Configura el fondo, color de texto y relleno del pie de página */
+            footer {
+                background-color: #333;
+                color: #fff;
+                padding: 20px;
+                text-align: center;/* Centra el texto del pie de página */
+            }
+
+            /* Configura el contenedor de contenido del pie de página con flexbox, centrándolo y añadiendo espacio entre elementos */
+            .footer-content {
+                display: flex;
+                justify-content: center;
+                gap: 40px; /* Añade un espacio de 40px entre los elementos */
+                margin-bottom: 20px;
+            }
+
+            /* Establece el margen inferior del encabezado h2 */
+            .footer-content h2 {
+                margin-bottom: 10px;
+            }
+
+            /* Estiliza los enlaces con color blanco, sin subrayado y tamaño de fuente de 1.5em */
+            .footer-content a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 1.5em;
+                margin: 0 10px; /* Añade un margen horizontal de 10px */
+            }
+
+            /* Cambia el color del enlace al pasar el ratón sobre él */
+            .footer-content a:hover {
+                color: #ddd;
+            }
+
+            /* Configura el margen de los párrafos de información de contacto */
+            .contact-info p {
+                margin: 5px 0;
+            }
+
+            /* Configura el borde superior y el relleno superior de la parte inferior del pie de página */
+            .footer-bottom {
+                border-top: 1px solid #333;
+                padding-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-container">
+
+            <div class="header-container">
+                <header>
+                    <h1>TechNova</h1>
+                </header>
+            </div>
+
+            <div class="nav-container">
+                <nav>
+                    <a href="#">Inicio</a>
+                    <a href="#">Productos</a>
+                    <a href="#">Registro</a>
+                </nav>
+            </div>
+            
+            <div class="section-container">
+                <section class="image-section">
+                    <img src="imagenes/audifonos.jpg" alt="AudifonosPortada">
+                </section>
+            </div>
+            <div class="container-producto">
+                <div class="seccion-producto">
+                    <h2>Productos</h2>
+                </div>
+                <div class="productos">
+                    <article>
+                        <img src="imagenes/audifono1.jpg" alt="Audífonos">
+                        <h3>Audífono Hyperx Cloud Alpha S 7.1 Surround Sound</h3>
+                        <p>S/. 319.90</p>
+                        <button>Añadir al carrito</button>
+                    </article>
+                    <article>
+                        <img src="imagenes/audifono2.jpg" alt="Audífonos">
+                        <h3>Audífono Hyperx Cloud Alpha PRO Gaming Headset</h3>
+                        <p>S/. 296.90</p>
+                        <button>Añadir al carrito</button>
+                    </article>
+                    <article>
+                        <img src="imagenes/audifono3.jpg" alt="Audífonos">
+                        <h3>Audífono Hyperx Cloud Core Headset 7.1</h3>
+                        <p>S/. 298.90</p>
+                        <button>Añadir al carrito</button>
+                    </article>
+                </div>
+            </div>
+
+            <div>
+                <footer>
+                    <div class="footer-content">
+                        <div class="social-media">
+                            <h2>Síguenos</h2>
+                            <a href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-instagram icon instagram"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-twitter icon twitter"></i>
+                            </a>
+                        </div>
+                        <div class="contact-info">
+                            <h2>Contacto</h2>
+                            <p>Teléfono: 01 5043333</p>
+                            <p>Celular: +51 232343546</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="footer-bottom">
+                        <p>&copy; 2024 - TODOS LOS DERECHOS RESERVADOS</p> 
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>
